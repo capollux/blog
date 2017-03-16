@@ -1,0 +1,37 @@
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">이전 페이지</a>
+  {% else %}
+    <span class="disable">이전 페이지</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+
+    {% assign limit_prev_page = paginator.page | minus: 4 %}
+    {% assign limit_next_page = paginator.page | plus: 4 %}
+
+    {% if limit_prev_page < 1 %}
+      {% assign limit_next_page = limit_next_page | minus: limit_prev_page %}
+    {% elsif limit_next_page > paginator.total_pages %}
+      {% assign limit_prev_page = limit_prev_page | plus: paginator.total_pages | minus: limit_next_page | plus: 1 %}
+    {% endif %}
+
+    {% if page == paginator.page %}
+      <span class="active">{{ page }}</span>
+    {% elsif limit_prev_page < page and page < limit_next_page %}
+      {% if page == 1 %}
+        <a href="/">{{ page }}</a>
+      {% else %}
+        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">다음 페이지</a>
+  {% else %}
+    <span class="disable">다음 페이지</span>
+  {% endif %}
+</div>
+{% endif %}

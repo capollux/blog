@@ -1,0 +1,16 @@
+/**
+ * Links
+ */
+a {
+  color: $brand-color;
+
+  &:visited {
+    color: $brand-color;
+  }
+
+  &:focus,
+  &:hover {
+    color: darken($brand-color,15%);
+  }
+
+}
