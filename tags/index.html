@@ -20,16 +20,16 @@ order: 2
   {% assign tag = t | first %}
   {% assign posts = t | last %}
 
-  <h4 id="{{ tag | escape }}" class="text-color-like-blue">{{ tag | escape }}</h4>
+  <h4 id="{{ tag | escape }}">{{ tag | escape }}</h4>
 
   <div class="mb-4 ml-3">
     {% for post in posts %}
-    <div class="post-meta-color">
+    <div class="post-meta">
       <span class="post-date">{{ post.date | date: "%m/%d, %Y" }}</span>
       {% if post.author %}
       <span class="post-author">{{ site.data.members[post.author].name }}</span>
       {% endif %}
-      <a class="post-link-color" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
     </div>
     {% endfor %}
   </div>
