@@ -1,17 +1,10 @@
 ---
 layout:   post
-title:    "Install Ruby & Rails via rbenv with Ubuntu 16.04 LTS"
+title:    "Install Ruby & Rails using rbenv on Ubuntu 16.04 LTS"
 date:     2017-03-18 00:21:00 +0900
 tags:     ruby rails
 author:   junwoo
 ---
-
-### Intro
-예전에는 `Ruby on Rails` 환경 구축을 위해서 `rvm`을 사용해왔다.
-그러나 요즘에는 `rvm`이 환경을 너무 많이 건드린다는 얘기가 있어서
-공식 Ruby 사이트에서 권장하는 `rbenv`를 이용하여 환경 설정을 해보려 한다.
-`rvm`은 설치가 매우 간단했으나, `rbenv`는 조금 더 해주어야하는 부분이 있어서 정리를 해본다.
-
 
 ### 의존성 패키지 설치
 
@@ -38,7 +31,9 @@ $ exec $SHELL
 
 ### Ruby 설치
 
-* ruby version은 사용하고자 하는 version으로 설치를 한다. 여기서는 version 2.3.3을 설치하는 것으로 한다. 설치 후 `global` 명령어로 version 2.3.3을 default로 사용하도록 한다.
+* ruby version은 사용하고자 하는 version으로 설치를 한다.
+여기서는 version 2.3.3을 설치하는 것으로 한다.
+설치 후 version 2.3.3을 default로 사용하도록 한다.
 
 ```console
 $ rbenv install -v 2.3.3
@@ -72,10 +67,4 @@ $ rbenv rehash
 
 ```console
 $ rails -v
-```
-
-
-#### Appendix. Mysql
-```console
-$ sudo apt-get install mysql-server mysql-client libmysqlclient-dev
 ```
