@@ -28,10 +28,11 @@ $ cd
 $ git clone git://github.com/sstephenson/rbenv.git .rbenv
 $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+$ exec $SHELL
 
 $ git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 $ echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-$ source ~/.bashrc
+$ exec $SHELL
 ```
 
 
@@ -59,6 +60,9 @@ $ gem install bundler
 ```
 
 ### Rails 설치
+
+* 최신 버전의 rails를 설치한다.
+
 ```console
 $ gem install rails
 $ rbenv rehash
