@@ -1,10 +1,12 @@
 ---
 layout:   post
-title:    "Install Atom text editor in Ubuntu / Linux Mint (32bit + 64bit) via PPA"
+title:    "Install Atom Text Editor In Ubuntu / Linux Mint (32bit + 64bit) Via PPA"
 date:     2016-03-04 17:30:12 +0900
 tags:     ubuntu atom
 author:   junwoo
 ---
+
+The [WebUpd8](http://www.webupd8.org) Atom PPA was updated so there are now Atom packages for both 32bit and 64bit available in the PPA.
 
 To add the WebUpd8 Atom PPA and install Atom text editor in Ubuntu, Linux Mint and derivatives (now available for both 32bit and 64bit), use the following commands:
 
