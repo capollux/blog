@@ -2,7 +2,7 @@
 layout:   post
 title:    "rbenv Build System On Ubuntu Sublime Text 3"
 date:     2016-03-04 17:30:12 +0900
-tags:     ubuntu atom
+tags:     ubuntu rbenv ruby sublimetext
 author:   junwoo
 ---
 
