@@ -12,10 +12,6 @@ layout: default
 
           <span class="post-date">{{ post.date | date: "%m/%d, %Y" }}</span>
 
-          {% if post.author %}
-          <span class="post-author">{{ site.data.members[post.author].name }}</span>
-          {% endif %}
-
           {% for category in post.categories %}
           <a href="/categories/#{{ category | escape }}" class="post-tags">{{ category | escape }}</a>
           {% endfor %}

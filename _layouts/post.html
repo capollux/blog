@@ -7,9 +7,6 @@ layout: default
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="lh-2 post-meta">
       <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%m/%d, %Y" }}</time>
-      {% if page.author %}
-      <span class="post-author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ site.data.members[page.author].name }}</span></span>
-      {% endif %}
       {% for category in page.categories %}
       <a href="/categories/#{{ category | escape }}" class="post-tags">{{ category | escape }}</a>
       {% endfor %}
