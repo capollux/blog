@@ -1,7 +1,7 @@
 ---
 layout:   post
 title:    "Server Setting For Rails Application With rbenv, Nginx, Passenger, Capistrano On AWS EC2 Ubuntu 16.04"
-date:     2016-10-03 14:26:18 +0900
+date:     2017-03-21 23:26:18 +0900
 tags:     aws rails
 author:   junwoo
 ---

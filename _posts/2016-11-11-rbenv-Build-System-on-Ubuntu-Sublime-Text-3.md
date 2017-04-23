@@ -1,7 +1,7 @@
 ---
 layout:   post
 title:    "rbenv Build System On Ubuntu Sublime Text 3"
-date:     2016-03-04 17:30:12 +0900
+date:     2016-11-11 22:11:22 +0900
 tags:     ubuntu rbenv ruby sublimetext
 author:   junwoo
 ---
