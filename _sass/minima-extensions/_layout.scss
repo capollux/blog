@@ -46,10 +46,17 @@
  * Site header
  */
 .site-header {
+  padding-top: 20px;
   min-height: 56px;
 
   // Positioning context for the mobile navigation icon
   position: relative;
+}
+
+@include media-query($on-palm) {
+  .site-header {
+    padding-top: 0px;
+  }
 }
 
 .site-title {
