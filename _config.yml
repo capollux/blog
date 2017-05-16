@@ -19,6 +19,8 @@ description: "Don't Starve."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://zzulu.xyz" # the base hostname & protocol for your site, e.g. http://example.com
 github: capollux
+disqus:
+  shortname: zzulu
 
 paginate: 10
 paginate_path: /page/:num
