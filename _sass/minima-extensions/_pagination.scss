@@ -34,3 +34,9 @@
   }
 
 }
+
+@include media-query($on-palm) {
+  .pagination {
+    font-size: $small-font-size;
+  }
+}

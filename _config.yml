@@ -23,7 +23,7 @@ disqus:
   shortname: zzulu
 google_analytics: UA-82376711-1
 
-paginate: 10
+paginate: 1
 paginate_path: /page/:num
 
 # Build settings
