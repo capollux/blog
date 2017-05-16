@@ -16,6 +16,13 @@
 
 // text color
 
+.text-color-base {
+  color: $text-color;
+  &:visited {
+    color: $text-color;
+  }
+}
+
 .text-color-grey {
   color: $grey-color;
 }

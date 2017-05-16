@@ -2,7 +2,6 @@
 layout:   post
 title:    "Recover Git Branch"
 date:     2016-10-03 14:26:18 +0900
-tags:     git
 author:   junwoo
 comments: true
 ---

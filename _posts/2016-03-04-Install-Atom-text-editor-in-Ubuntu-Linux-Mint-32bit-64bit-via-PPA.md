@@ -2,7 +2,6 @@
 layout:   post
 title:    "Install Atom Text Editor In Ubuntu / Linux Mint (32bit + 64bit) Via PPA"
 date:     2016-03-04 17:30:12 +0900
-tags:     ubuntu atom
 author:   junwoo
 comments: true
 ---

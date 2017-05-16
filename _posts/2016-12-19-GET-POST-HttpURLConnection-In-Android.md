@@ -2,7 +2,6 @@
 layout:   post
 title:    "GET / POST HttpURLConnection in Android"
 date:     2016-12-19 17:26:11 +0900
-tags:     android
 author:   junwoo
 comments: true
 ---
