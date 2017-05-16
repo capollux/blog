@@ -21,6 +21,7 @@ url: "http://zzulu.xyz" # the base hostname & protocol for your site, e.g. http:
 github: capollux
 disqus:
   shortname: zzulu
+google_analytics: UA-82376711-1
 
 paginate: 10
 paginate_path: /page/:num
