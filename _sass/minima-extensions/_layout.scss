@@ -38,10 +38,6 @@
   margin-left: 1rem !important;
 }
 
-.lh-2 {
-  line-height: 2;
-}
-
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -276,7 +272,6 @@
 .post-title {
   font-size: 42px;
   letter-spacing: -1px;
-  line-height: 1.2;
 
   @include media-query($on-laptop) {
     font-size: 36px;
@@ -308,6 +303,10 @@
     @include media-query($on-laptop) {
       font-size: 18px;
     }
+  }
+
+  h2, h3, h4 {
+    margin-top: $spacing-unit * 1.25;
   }
 }
 

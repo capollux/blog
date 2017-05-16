@@ -8,19 +8,15 @@ layout: default
     {% for post in paginator.posts %}
       <li class="post-meta">
 
-        <div class="lh-2">
+        <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
 
-          <span class="post-date">{{ post.date | date: "%m/%d, %Y" }}</span>
+        {% for category in post.categories %}
+        <a href="/categories/#{{ category | escape }}" class="post-tags">{{ category | escape }}</a>
+        {% endfor %}
 
-          {% for category in post.categories %}
-          <a href="/categories/#{{ category | escape }}" class="post-tags">{{ category | escape }}</a>
-          {% endfor %}
-
-          {% for tag in post.tags %}
-          <a href="/tags/#{{ tag | escape }}" class="post-tags">{{ tag | escape }}</a>
-          {% endfor %}
-
-        </div>
+        {% for tag in post.tags %}
+        <a href="/tags/#{{ tag | escape }}" class="post-tags">{{ tag | escape }}</a>
+        {% endfor %}
 
         <h2 class="mt-1">
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
