@@ -4,6 +4,7 @@ title:    "GET / POST HttpURLConnection in Android"
 date:     2016-12-19 17:26:11 +0900
 tags:     android
 author:   junwoo
+comments: true
 ---
 
 `HttpURLConnection` 을 이용하여 GET 또는 POST 방식으로 특정 URL을 호출하는 경우,

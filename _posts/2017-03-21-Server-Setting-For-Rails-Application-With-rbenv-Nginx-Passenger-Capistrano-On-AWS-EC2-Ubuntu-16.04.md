@@ -4,6 +4,7 @@ title:    "Server Setting For Rails Application With rbenv, Nginx, Passenger, Ca
 date:     2017-03-21 23:26:18 +0900
 tags:     aws rails
 author:   junwoo
+comments: true
 ---
 
 ## 1. Install ruby using rbenv
