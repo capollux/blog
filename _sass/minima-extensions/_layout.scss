@@ -47,7 +47,7 @@
  * Site header
  */
 .site-header {
-  padding-top: 20px;
+  padding-top: $spacing-unit * 0.625;
   min-height: 56px;
 
   // Positioning context for the mobile navigation icon
