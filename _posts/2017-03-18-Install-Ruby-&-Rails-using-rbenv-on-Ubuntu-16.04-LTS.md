@@ -2,7 +2,6 @@
 layout:   post
 title:    "Install Ruby & Rails Using rbenv On Ubuntu 16.04 LTS"
 date:     2017-03-18 00:21:00 +0900
-author:   junwoo
 ---
 
 ### 의존성 패키지 설치

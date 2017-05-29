@@ -2,7 +2,6 @@
 layout:   post
 title:    "Server Setting For Rails Application With rbenv, Nginx, Passenger, Capistrano On AWS EC2 Ubuntu 16.04"
 date:     2017-03-21 23:26:18 +0900
-author:   junwoo
 ---
 
 ## 1. Install ruby using rbenv
