@@ -94,6 +94,7 @@ $ rake secret RAILS_ENV=production
 Append the 'SECRET KEY' to 'application.yml'
 
 ```yml
+# config/application.yml
 SECRET_KEY_BASE: [SECRET KEY]
 ```
 
