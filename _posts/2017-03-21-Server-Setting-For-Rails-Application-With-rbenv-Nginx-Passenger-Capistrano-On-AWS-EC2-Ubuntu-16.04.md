@@ -46,8 +46,35 @@ $ echo "gem: --no-document" > ~/.gemrc
 $ gem install bundler
 ```
 
-## 2. Configure capistrano & Run deploy __(Client side)__
-### 2.1. Install the Capistrano gem
+## 2. Configure figaro and capistrano & Run deploy __(Client side)__
+
+### 2.1. Make application.yml using figaro
+
+Add gem to Gemfile:
+
+```ruby
+gem 'figaro'
+```
+
+Install figaro:
+
+```console
+bundle && bundle exec figaro install
+```
+
+Generate 'SECRET KEY':
+
+```console
+$ rake secret RAILS_ENV=production
+```
+
+Append the 'SECRET KEY' to 'application.yml'
+
+```yml
+SECRET_KEY_BASE: [SECRET KEY]
+```
+
+### 2.2. Install the Capistrano gem
 
 Add Capistrano to your Gemfile:
 
@@ -69,7 +96,7 @@ Then run Bundler to ensure Capistrano is downloaded and installed:
 $ bundle && bundle exec cap install
 ```
 
-### 2.2. Configure Capfile
+### 2.3. Configure Capfile
 Find the following lines, and uncomment them:
 ```ruby
 require "capistrano/rbenv"
@@ -79,13 +106,13 @@ require "capistrano/passenger"
 require "capistrano/linked_files"
 ```
 
-### 2.3. Configure config/deploy.rb
+### 2.4. Configure config/deploy.rb
 Find the following lines, and uncomment them or add lines:
 ```ruby
 set :application, "my_app_name" # Your app name
 set :repo_url, "git@example.com:me/my_repo.git" # Your app's git repo url
 
-set :deploy_to, "/home/ubuntu/my_app_name"
+set :deploy_to, "/home/ubuntu/[my_app_name]"
 
 append :linked_files, "config/application.yml", "config/database.yml", "config/secrets.yml"
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads", "public/assets"
@@ -122,7 +149,7 @@ namespace :deploy do
 end
 ```
 
-### 2.4. Configure deploy/production.rb
+### 2.5. Configure deploy/production.rb
 Find the following lines, and uncomment them:
 ```ruby
 # deploy/production.rb
@@ -136,7 +163,7 @@ server 'example.com', # or Public IP
   }
 ```
 
-#### 2.4.1. SSH Agent Forwarding
+#### 2.5.1. SSH Agent Forwarding
 SSH Agent Forwarding is a great way to keep SSH keys manageable as it allows the deployment server to use your own local private key to authenticate to the git repository, instead of having to give your deployment server access to your git repository.
 
 * Only for macOS using keychain
@@ -155,7 +182,7 @@ Enter the following text into the file, replacing example.com with your server's
   ForwardAgent yes 
 ```
 
-### 2.5. Upload linked_files using capistrano-linked-files
+### 2.6. Upload linked_files using capistrano-linked-files
 
 Excute deploy command:
 ```console
@@ -279,7 +306,7 @@ gem 'mysql2'
 Configure database.yml
 
 ```yml
-# /home/ubuntu/my_app_name/shared/config/database.yml
+# /home/ubuntu/[my_app_name]/shared/config/database.yml
 production:
   adapter: mysql2
   host: 127.0.0.1
@@ -290,29 +317,7 @@ production:
   timeout: 5000
 ```
 
-
-## 5. Configure application.yml & secrets.yml using figaro
-
-Add gem to Gemfile:
-
-```ruby
-gem 'figaro'
-```
-
-Generate 'SECRET KEY'
-
-```console
-$ rake secret RAILS_ENV=production
-```
-
-Append the 'SECRET KEY' to application.yml
-
-```yml
-SECRET_KEY_BASE: [SECRET KEY]
-```
-
-
-## 6. Run deploy __(Client side)__
+## 5. Run deploy **(Client side)**
 
 All deploy method includes passenger restart
 
@@ -326,4 +331,10 @@ Manually touch restart.txt
 
 ```console
 $ bundle exec cap production passenger:restart
+```
+
++ Manually restart nginx **(Server side)**
+
+```console
+sudo service nginx restart
 ```
