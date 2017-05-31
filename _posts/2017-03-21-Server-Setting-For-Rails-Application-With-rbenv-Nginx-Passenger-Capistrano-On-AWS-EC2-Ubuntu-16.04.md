@@ -60,7 +60,7 @@ gem 'mysql2'
 Configure database.yml
 
 ```yml
-# /home/ubuntu/[my_app_name]/shared/config/database.yml
+# config/database.yml
 production:
   adapter: mysql2
   host: 127.0.0.1
