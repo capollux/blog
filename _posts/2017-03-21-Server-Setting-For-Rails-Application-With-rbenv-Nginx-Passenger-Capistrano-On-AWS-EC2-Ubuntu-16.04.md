@@ -194,7 +194,7 @@ The error is occurred like:
 ERROR linked file /home/ubuntu/[my_app_name]/shared/config/application.yml does not exist on example.com
 ```
  
-But you must **run deploy command** to make 'shared' folder on the server, because the following command requires 'shared' folder. Capistrano make 'shared' folder when you run deploy command, so you can upload 'linked_files'.
+But you must run deploy command **to make 'shared' folder** on the server, because the following command requires 'shared' folder. Capistrano make 'shared' folder when you run deploy command, so you can upload 'linked_files'.
 
 ```console
 $ bundle exec cap production linked_files:upload_files
