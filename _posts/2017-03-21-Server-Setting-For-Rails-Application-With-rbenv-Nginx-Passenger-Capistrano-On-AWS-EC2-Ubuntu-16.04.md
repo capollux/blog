@@ -201,7 +201,7 @@ $ sudo service nginx start
 ### 3.2. Configure passenger
 
 ```console
-$ sudo nano /etc/nginx/passenger.conf
+$ sudo vi /etc/nginx/passenger.conf
 ```
 
 Change the passenger_ruby line to point to your ruby executable
@@ -214,7 +214,7 @@ passenger_ruby /home/ubuntu/.rbenv/shims/ruby;
 ### 3.3. Configure nginx
 
 ```console
-$ sudo nano /etc/nginx/nginx.conf
+$ sudo vi /etc/nginx/nginx.conf
 ```
 
 Find the following lines, and uncomment them:
@@ -233,7 +233,7 @@ include /etc/nginx/passenger.conf;
 And add the nginx host
 
 ```console
-$ sudo nano /etc/nginx/sites-enabled/default
+$ sudo vi /etc/nginx/sites-enabled/default
 ```
 Replace the file's contents with the following
 
