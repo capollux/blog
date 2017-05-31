@@ -155,10 +155,6 @@ Enter the following text into the file, replacing example.com with your server's
   ForwardAgent yes 
 ```
 
-### 2.5 Excute deploy command for make linked-files
-
-
-
 ### 2.6. Upload linked_files using capistrano-linked-files
 
 Excute deploy command:
