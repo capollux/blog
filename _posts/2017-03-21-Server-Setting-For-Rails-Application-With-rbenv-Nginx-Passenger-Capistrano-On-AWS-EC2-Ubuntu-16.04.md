@@ -184,21 +184,23 @@ Enter the following text into the file, replacing example.com with your server's
 
 ### 2.6. Upload linked_files using capistrano-linked-files
 
-Excute deploy command:
+Run deploy command:
 ```console
 $ bundle exec cap production deploy
 ```
 
-Oops, the error is occurred like:
+The error is occurred like:
 ```console
 ERROR linked file /home/ubuntu/[my_app_name]/shared/config/application.yml does not exist on example.com
 ```
-
-But, don't worry. Capistrano make 'shared' folders when you excute deploy command, then you can upload 'linked_files'.
+ 
+But you must **run deploy command** to make 'shared' folder on the server, because the following command requires 'shared' folder. Capistrano make 'shared' folder when you run deploy command, so you can upload 'linked_files'.
 
 ```console
 $ bundle exec cap production linked_files:upload_files
 ```
+
+  
 
 ## 3. Passenger & nginx
 
