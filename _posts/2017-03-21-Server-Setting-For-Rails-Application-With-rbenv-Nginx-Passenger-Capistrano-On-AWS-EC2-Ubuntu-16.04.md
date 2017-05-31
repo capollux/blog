@@ -59,7 +59,7 @@ gem 'figaro'
 Install figaro:
 
 ```console
-bundle && bundle exec figaro install
+$ bundle && bundle exec figaro install
 ```
 
 Generate 'SECRET KEY':
@@ -186,7 +186,7 @@ Enter the following text into the file, replacing example.com with your server's
 
 Excute deploy command:
 ```console
-bundle exec cap production deploy
+$ bundle exec cap production deploy
 ```
 
 Oops, the error is occurred like:
@@ -333,8 +333,8 @@ Manually touch restart.txt
 $ bundle exec cap production passenger:restart
 ```
 
-+ Manually restart nginx **(Server side)**
+Manually restart nginx **(Server side)**
 
 ```console
-sudo service nginx restart
+$ sudo service nginx restart
 ```
