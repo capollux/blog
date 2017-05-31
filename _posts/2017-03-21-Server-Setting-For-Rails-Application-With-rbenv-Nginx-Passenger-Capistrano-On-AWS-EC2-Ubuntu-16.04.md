@@ -46,9 +46,32 @@ $ echo "gem: --no-document" > ~/.gemrc
 $ gem install bundler
 ```
 
-## 2. Configure figaro and capistrano & Run deploy __(Client side)__
+## 2. Configure mysql, figaro and capistrano & Run deploy __(Client side)__
 
-### 2.1. Make application.yml using figaro
+### 2.1. Configure 'database.yml' using mysql
+
+Add gem to Gemfile:
+
+```ruby
+# Gemfile
+gem 'mysql2'
+```
+
+Configure database.yml
+
+```yml
+# /home/ubuntu/[my_app_name]/shared/config/database.yml
+production:
+  adapter: mysql2
+  host: 127.0.0.1
+  database: [my_app_name]_production
+  username: root
+  password: [my_mysql_password]
+  pool: 5
+  timeout: 5000
+```
+
+### 2.2. Make 'application.yml' using figaro
 
 Add gem to Gemfile:
 
@@ -74,7 +97,7 @@ Append the 'SECRET KEY' to 'application.yml'
 SECRET_KEY_BASE: [SECRET KEY]
 ```
 
-### 2.2. Install the Capistrano gem
+### 2.3. Install the Capistrano gem
 
 Add Capistrano to your Gemfile:
 
@@ -96,7 +119,7 @@ Then run Bundler to ensure Capistrano is downloaded and installed:
 $ bundle && bundle exec cap install
 ```
 
-### 2.3. Configure Capfile
+### 2.4. Configure Capfile
 Find the following lines, and uncomment them:
 ```ruby
 require "capistrano/rbenv"
@@ -106,7 +129,7 @@ require "capistrano/passenger"
 require "capistrano/linked_files"
 ```
 
-### 2.4. Configure config/deploy.rb
+### 2.5. Configure config/deploy.rb
 Find the following lines, and uncomment them or add lines:
 ```ruby
 set :application, "my_app_name" # Your app name
@@ -149,7 +172,7 @@ namespace :deploy do
 end
 ```
 
-### 2.5. Configure deploy/production.rb
+### 2.6. Configure deploy/production.rb
 Find the following lines, and uncomment them:
 ```ruby
 # deploy/production.rb
@@ -163,7 +186,7 @@ server 'example.com', # or Public IP
   }
 ```
 
-#### 2.5.1. SSH Agent Forwarding
+#### 2.6.1. SSH Agent Forwarding
 SSH Agent Forwarding is a great way to keep SSH keys manageable as it allows the deployment server to use your own local private key to authenticate to the git repository, instead of having to give your deployment server access to your git repository.
 
 * Only for macOS using keychain
@@ -182,7 +205,7 @@ Enter the following text into the file, replacing example.com with your server's
   ForwardAgent yes 
 ```
 
-### 2.6. Upload linked_files using capistrano-linked-files
+### 2.7. Upload linked_files using capistrano-linked-files
 
 Run deploy command:
 ```console
@@ -297,33 +320,12 @@ $ sudo service nginx restart
 ```
 
 
-## 4. Install Mysql, Configure database.yml
+## 4. Install Mysql
 
 Install Mysql.
 
 ```console
 $ sudo apt-get install mysql-server mysql-client libmysqlclient-dev
-```
-
-Add gem to Gemfile:
-
-```ruby
-# Gemfile
-gem 'mysql2'
-```
-
-Configure database.yml
-
-```yml
-# /home/ubuntu/[my_app_name]/shared/config/database.yml
-production:
-  adapter: mysql2
-  host: 127.0.0.1
-  database: [my_app_name]_production
-  username: root
-  password: [my_mysql_password]
-  pool: 5
-  timeout: 5000
 ```
 
 ## 5. Run deploy **(Client side)**
