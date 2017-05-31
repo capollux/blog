@@ -275,6 +275,13 @@ server {
         rails_env           production;
         root                /home/ubuntu/[my_app_name]/current/public;
 
+        ## Comment the following block
+        # location / {
+        #   # First attempt to serve request as file, then
+        #   # as directory, then fall back to displaying a 404.
+        #   try_files $uri $uri/ =404;
+        # }
+
         # redirect server error pages to the static page /50x.html
         error_page   500 502 503 504  /50x.html;
         location = /50x.html {
