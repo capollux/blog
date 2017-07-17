@@ -19,6 +19,8 @@ date:     2017-07-17 14:46:00 +0900
 
 ### preview.coffee
 
+**turbolinks**를 사용하고 있을 경우이다. **turbolinks**를 사용하지 않는다면, `turbolinks:load` 대신에 `DOMContentLoaded`를 사용한다.
+
 ```coffee
 document.addEventListener "turbolinks:load", (e) -> 
   input = document.querySelector("#image_upload")
