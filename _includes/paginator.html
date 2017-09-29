@@ -21,7 +21,7 @@
       <span class="active">{{ page }}</span>
     {% elsif limit_prev_page < page and page < limit_next_page %}
       {% if page == 1 %}
-        <a href="/">{{ page }}</a>
+        <a href="{{ '/' | prepend: site.baseurl }}">{{ page }}</a>
       {% else %}
         <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
       {% endif %}
