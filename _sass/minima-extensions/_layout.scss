@@ -6,34 +6,6 @@
   margin-top: 0.25rem !important;
 }
 
-.mt-2 {
-  margin-top: 0.5rem !important;
-}
-
-.mb-0 {
-  margin-bottom: 0rem !important;
-}
-
-.mb-1 {
-  margin-bottom: 0.25rem !important;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem !important;
-}
-
-.mb-3 {
-  margin-bottom: 1rem !important;
-}
-
-.mb-4 {
-  margin-bottom: 2rem !important;
-}
-
-.mb-5 {
-  margin-bottom: 4rem !important;
-}
-
 .ml-3 {
   margin-left: 1rem !important;
 }
@@ -224,7 +196,11 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: $spacing-unit*2 0;
+
+  @include media-query($on-laptop) {
+    padding: $spacing-unit 0;
+  }
 }
 
 .page-heading {
