@@ -14,4 +14,4 @@ $ sudo apt-get update
 $ sudo apt-get install atom
 ```
 
-the PPA is available for Ubuntu 14.10, 14.04, 13.10 and 12.04. Ubuntu 12.10 and 13.04 are no longer supported by Canonical!
+The PPA is available for Ubuntu 14.10, 14.04, 13.10 and 12.04. Ubuntu 12.10 and 13.04 are no longer supported by Canonical!
