@@ -18,7 +18,6 @@ email: "capollux10@gmail.com"
 description: "Don't Starve."
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "http://zzulu.xyz" # the base hostname & protocol for your site, e.g. http://example.com
-github_username: capollux
 google_analytics: UA-82376711-2
 
 paginate: 10
