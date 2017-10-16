@@ -301,6 +301,9 @@ server {
         rails_env           production;
         root                /home/ubuntu/[my_app_name]/current/public;
 
+        # Add index.php to the list if you are using PHP
+        # index index.html index.htm index.nginx-debian.html;
+
         ## Comment the following block
         # location / {
         #   # First attempt to serve request as file, then
@@ -315,7 +318,13 @@ server {
         }
 }
 ```
-Restart nginx.
+
+Check the nginx configuration file.
+```console
+$ sudo nginx -t
+```
+
+If syntax is ok and test is successful, Restart nginx.
 ```console
 $ sudo service nginx restart
 ```
