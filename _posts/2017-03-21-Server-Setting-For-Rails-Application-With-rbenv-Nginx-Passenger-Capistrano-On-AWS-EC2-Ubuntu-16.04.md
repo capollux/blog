@@ -11,7 +11,7 @@ date:     2017-03-21 23:26:18 +0900
 Install some dependencies for Ruby.
 
 ```console
-$ sudo apt update
+$ sudo apt-get update
 $ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs
 ```
 
@@ -234,20 +234,20 @@ Install some dependencies.
 
 ```console
 $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7
-$ sudo apt install -y apt-transport-https ca-certificates
+$ sudo apt-get install -y apt-transport-https ca-certificates
 ```
 
 Add Passenger APT repository.
 
 ```console
 $ sudo sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger xenial main > /etc/apt/sources.list.d/passenger.list'
-$ sudo apt update
+$ sudo apt-get update
 ```
 
 Install Passenger & Nginx
 
 ```console
-$ sudo apt install -y nginx-extras passenger
+$ sudo apt-get install -y nginx-extras passenger
 $ sudo service nginx start
 ```
 
