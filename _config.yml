@@ -27,9 +27,9 @@ paginate_path: /page/:num
 markdown: kramdown
 # theme: minima
 plugins:
+  - jekyll-paginate
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
