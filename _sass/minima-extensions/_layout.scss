@@ -1,3 +1,25 @@
+// nav
+
+.page-link {
+  position: absolute;
+  top: $spacing-unit;
+  right: $spacing-unit;
+
+  width: $spacing-unit / 2;
+  height: $spacing-unit / 2;
+
+  border: 2px solid #111;
+
+  &:hover {
+    border-color: rgba($text-color,.3);
+  }
+
+  @include media-query($on-laptop) {
+    top: $spacing-unit / 2;
+    right: $spacing-unit / 2;
+  }
+}
+
 /**
  * Public
  */
