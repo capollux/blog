@@ -1,6 +1,28 @@
-// nav
+/**
+ * Navigation
+ */
 
-.page-link {
+ .page-link-left {
+  position: absolute;
+  top: $spacing-unit;
+  left: $spacing-unit;
+
+  width: $spacing-unit / 2;
+  height: $spacing-unit / 2;
+
+  border: 2px solid #111;
+
+  &:hover {
+    border-color: rgba($text-color,.3);
+  }
+
+  @include media-query($on-laptop) {
+    top: $spacing-unit / 2;
+    left: $spacing-unit / 2;
+  }
+}
+
+.page-link-right {
   position: absolute;
   top: $spacing-unit;
   right: $spacing-unit;
@@ -218,10 +240,10 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit*2 0;
+  padding: $spacing-unit * 3 0;
 
   @include media-query($on-laptop) {
-    padding: $spacing-unit*1.5 0;
+    padding: $spacing-unit * 1.5 0;
   }
 }
 

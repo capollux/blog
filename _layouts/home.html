@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% include nav.html %}
+{% include nav_right.html %}
 
 <div class="home">
 
@@ -10,9 +10,9 @@ layout: default
     {% for post in paginator.posts %}
       <li class="post-meta">
 
-        <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+        <!-- <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span> -->
 
-        <h2 class="mt-1">
+        <h2>
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h2>
 
