@@ -3,5 +3,10 @@
 ---
 @charset 'utf-8';
 
-@import 'fonts';
-@import 'zzulu';
+@import 'variables';
+@import 'mixins';
+@import 'open-color';
+
+@import 'base';
+@import 'highlighting';
+@import 'layout';

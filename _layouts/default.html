@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
   {% include head.html %}
 
   <body>
+    
+    <div class="container">
+      {% include nav.html %}
+    </div>
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
+    <div class="container">
+      <main class="main" aria-label="Content">
         {{ content }}
-      </div>
-    </main>
+      </main>
+    </div>
 
   </body>
 

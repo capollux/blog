@@ -1,0 +1,31 @@
+/**
+ * Base
+ */
+body {
+  color: $oc-gray-8;
+}
+
+a {
+  color: $oc-violet-6;
+  &:hover {    
+    color: $oc-violet-8;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+
+/**
+ * Extends
+ */
+%hover-gray {
+  & {
+    color: $oc-gray-7;
+    &:hover {
+      color: $oc-gray-8;
+    }
+  }
+}

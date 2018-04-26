@@ -1,12 +1,39 @@
 /**
+ * Code formatting
+ */
+pre,
+code {
+  @include border-radius(0.125rem);
+  font-size: 0.9375rem;
+  background-color: $oc-gray-0;
+}
+
+code {
+  padding: 0.0625rem 0.3125rem;
+}
+
+pre {
+  padding: 0.5rem 0.75rem;
+  overflow-x: auto;
+
+  & > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+/**
  * Syntax highlighting styles
  */
 .highlight {
   background: #fff;
-  @extend %vertical-rhythm;
+  margin-bottom: $spacing-unit / 2;
 
   .highlighter-rouge & {
-    background: #f6f8fa;
+    @include border-radius(0.125rem);
+    background: $oc-gray-0;
   }
 
   .c     { color: #998; font-style: italic } // Comment

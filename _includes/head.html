@@ -5,16 +5,28 @@
 
   <title>{% if page.title %}{{ page.title | prepend: " # " | prepend: site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta name="application-name" content="zzulu">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="{{ '/assets/images/favicon-152.png' | relative_url }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@zzulu_">
+  <meta name="twitter:creator" content="@zzulu_">
+  <meta property="og:title" content="zzulu">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta property="og:image" content="{{ '/assets/images/og-image.png' | absolute_url }}">
 
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/bootstrap-reboot.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
   <!-- favicons -->
   <link rel="shortcut icon" href="{{ "/assets/images/favicon.ico" | relative_url }}" />
   <!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ "/assets/images/favicon-152.png" | relative_url }}">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ '/assets/images/favicon-152.png' | relative_url }}">
   <!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
-  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ "/assets/images/favicon-120.png" | relative_url }}">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ '/assets/images/favicon-120.png' | relative_url }}">
 
   {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google_analytics.html %}

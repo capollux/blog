@@ -2,18 +2,13 @@
 layout: default
 ---
 
-{% include nav_right.html %}
+<ul class="list">
+  {% for post in paginator.posts %}
+    <li class="list__item">
+      <a class="list__link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      <span class="list__meta">{{ post.date | date: "%b %d, %Y" }}</span>
+    </li>
+  {% endfor %}
+</ul>
 
-<div class="home">
-
-  <ul class="post-list">
-    {% for post in paginator.posts %}
-      <li>
-        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-
-  {% include paginator.html %}
-
-</div>
+{% include paginator.html %}
