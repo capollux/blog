@@ -6,6 +6,8 @@
   <title>{% if page.title %}{{ page.title | prepend: " # " | prepend: site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta name="application-name" content="zzulu">
+  <meta name="author" content="zzulu">
+  <meta name="theme-color" content="#212529">
   <meta name="msapplication-TileColor" content="#FFFFFF">
   <meta name="msapplication-TileImage" content="{{ '/assets/images/favicon-152.png' | relative_url }}">
   <meta name="twitter:card" content="summary_large_image">
