@@ -198,3 +198,17 @@
     }
   }  
 }
+
+
+/**
+ * About
+ */
+.about {
+  &__text {
+    white-space: pre-line;
+  }
+
+  &__projects {
+    padding-top: $spacing-unit / 2 ;
+  }
+}
