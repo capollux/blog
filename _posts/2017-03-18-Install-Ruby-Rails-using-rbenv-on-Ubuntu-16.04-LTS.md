@@ -29,23 +29,20 @@ $ exec $SHELL
 
 ### Ruby 설치
 
-* ruby version은 사용하고자 하는 version으로 설치를 한다.
-여기서는 version 2.3.3을 설치한다.
-설치 후 version 2.3.3을 default로 설정한다.
+ruby version은 사용하고자 하는 version으로 설치를 한다. 여기서는 version 2.3.3을 설치한다. 설치 후 version 2.3.3을 default로 설정한다.
 
 ```console
 $ rbenv install -v 2.3.3
 $ rbenv global 2.3.3
 ```
 
-* ruby version 확인
+ruby version 확인
 
 ```console
 $ ruby -v
 ```
 
-* gem을 설치할때 마다 관련 문서를 함께 받는 것이 default이다.
-그러나 우리는 이 문서를 보지는 경우가 드물다. 받지 않도록 한 후, bundler를 설치하자.
+gem을 설치할때 마다 관련 문서를 함께 받는 것이 default이다. 그러나 우리는 이 문서를 보지는 경우가 드물다. 받지 않도록 한 후, bundler를 설치하자.
 
 ```console
 $ echo "gem: --no-document" > ~/.gemrc
@@ -54,14 +51,14 @@ $ gem install bundler
 
 ### Rails 설치
 
-* 최신 버전의 rails를 설치한다.
+최신 버전의 rails를 설치한다.
 
 ```console
 $ gem install rails
 $ rbenv rehash
 ```
 
-* rails version 확인
+rails version 확인
 
 ```console
 $ rails -v

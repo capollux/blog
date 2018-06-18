@@ -192,19 +192,19 @@ SSH Agent Forwarding is a great way to keep SSH keys manageable as it allows the
 
 * Only for macOS using keychain
 
-```console
-$ ssh-add -K
-```
+  ```console
+  $ ssh-add -K
+  ```
 
 * All OS
 
-Open up the file at ~/.ssh/config. If this file doesn't exist, you can create it by entering touch ~/.ssh/config in the terminal.
-Enter the following text into the file, replacing example.com with your server's domain name or IP:
+  Open up the file at ~/.ssh/config. If this file doesn't exist, you can create it by entering touch ~/.ssh/config in the terminal.
+  Enter the following text into the file, replacing example.com with your server's domain name or IP:
 
-```console
- Host example.com 
-  ForwardAgent yes 
-```
+  ```console
+   Host example.com 
+    ForwardAgent yes 
+  ```
 
 ### 2.7. Upload linked_files using capistrano-linked-files
 
