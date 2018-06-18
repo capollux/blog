@@ -97,6 +97,9 @@
  * List
  */
 .list {
+  list-style-type: none;
+  padding-left: 0;
+  
   &__item {
     margin-bottom: $spacing-unit / 2;
   }
@@ -209,6 +212,8 @@
   }
 
   &__projects {
+    list-style-type: none;
+    padding-left: 0;
     padding-top: $spacing-unit / 2 ;
   }
 }
