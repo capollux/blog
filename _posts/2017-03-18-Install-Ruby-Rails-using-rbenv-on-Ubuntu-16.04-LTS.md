@@ -42,7 +42,7 @@ ruby version 확인
 $ ruby -v
 ```
 
-gem을 설치할때 마다 관련 문서를 함께 받는 것이 default이다. 그러나 우리는 이 문서를 보지는 경우가 드물다. 받지 않도록 한 후, bundler를 설치하자.
+gem을 설치할때 마다 관련 문서를 함께 받는 것이 default이다. 그러나 우리는 이 문서를 보는 경우가 드물다. 받지 않도록 한 후, bundler를 설치하자.
 
 ```console
 $ echo "gem: --no-document" > ~/.gemrc
