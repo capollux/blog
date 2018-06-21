@@ -1,6 +1,6 @@
 ---
 layout:   post
-title:    "Detecting Ruby Version in rbenv"
+title:    "Detecting Ruby Version In rbenv"
 date:     2018-06-21 15:40:00 +0900
 ---
 
