@@ -12,7 +12,7 @@ rbenv는 아래의 순서대로 루비 버전을 찾는다. `[version]`은 **2.4
 
 3. 전역 version 파일인 `~/.rbenv/version` 파일을 참조하여 ruby version을 인식한다. 이 파일은 `rbenv global [version]` 명령어로 생성할 수 있다.
 
-`rbenv version` 명령어를 터미널에서 입력해보면 아래와 같이 어디서 설정된 ruby 버전인지 확인 가능하다.
+`rbenv version` 명령어를 터미널에서 입력해보면 어디서 설정된 ruby 버전인지 확인 가능하다.
 
 ```sh
 $ rbenv version
