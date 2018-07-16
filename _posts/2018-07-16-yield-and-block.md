@@ -76,7 +76,7 @@ end
  
 class Hello
   def to_proc
-    Proc.new {puts 'converted hello'}
+    Proc.new { puts 'converted hello' }
   end
 end
  
